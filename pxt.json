@@ -6,7 +6,6 @@
         "neopixel.ts",
         "transitions.ts",
         "create.ts",
-        "defaultlightsoverrides.ts",
         "ns.ts",
         "neopixeloverrides.ts",
         "animations.jres",
