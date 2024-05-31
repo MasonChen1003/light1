@@ -20,7 +20,6 @@
     ],
     "public": true,
     "dependencies": {
-        "core": "file:../core",
         "color": "file:../color"
     }
 }
