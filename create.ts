@@ -14,8 +14,8 @@ namespace light {
     //% parts="neopixel"
     //% advanced=true
     export function createStrip(
-        pin: DigitalInOutPin = pins.pinByCfg(DAL.CFG_PIN_SCL),
-        numleds: number = 30,
+        pin: DigitalInOutPin = null,
+        numleds: number = 8,
         mode: NeoPixelMode = NeoPixelMode.RGB
     ): NeoPixelStrip {
         return light.createNeoPixelStrip(pin, numleds, mode);
