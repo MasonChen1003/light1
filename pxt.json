@@ -8,7 +8,6 @@
         "create.ts",
         "ns.ts",
         "light.h",
-        "light.cpp",
         "neopixeloverrides.ts",
         "animations.jres",
         "targetoverrides.ts"
