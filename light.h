@@ -13,5 +13,6 @@
 #include "neopixel.h"
 #define BITBANG_SUPPORTED 1
 #else
-#define BITBANG_SUPPORTED 0
+#include "neopixel.h"
+#define BITBANG_SUPPORTED 1
 #endif
