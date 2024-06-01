@@ -7,7 +7,7 @@
 // 0 - 0.22-0.38us hi 0.58-1.00us low 1-3
 // 1 - 0.58-1.00us hi 0.58-1.00us low 3-2
 
-#define SPI_SUPPORTED 1
+#define SPI_SUPPORTED 0
 
 #if defined(NRF52_SERIES)
 #define BIT_EXPANSION 5
