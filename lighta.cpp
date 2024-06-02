@@ -1,4 +1,4 @@
-#include "light.h"
+#include "lighta.h"
 
 // WS2812B timings, datasheet v1
 // 0 - 0.25-0.55us hi 0.70-1.00us low
@@ -18,10 +18,10 @@
 #endif
 
 #if defined(SAMD21) || defined(SAMD51) || defined(STM32F4) || defined(NRF52_SERIES) || defined(RP2040)
-#include "neopixel.h"
+#include "neopixela.h"
 #define BITBANG_SUPPORTED 1
 #else
-#include "neopixel.h"
+#include "neopixela.h"
 #define BITBANG_SUPPORTED 1
 #endif
 
