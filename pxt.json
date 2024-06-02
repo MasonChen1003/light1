@@ -7,6 +7,7 @@
         "transitions.ts",
         "create.ts",
         "ns.ts",
+        "neopixel.h",
         "light.h",
         "light.cpp",
         "neopixeloverrides.ts",
