@@ -1,4 +1,4 @@
-namespace light {
+namespace mylight {
     /**
      * Gets the default external light strip
      */
