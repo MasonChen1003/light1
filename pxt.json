@@ -7,9 +7,9 @@
         "transitions.ts",
         "create.ts",
         "ns.ts",
-        "neopixel.h",
-        "light.h",
-        "light.cpp",
+        "neopixela.h",
+        "lighta.h",
+        "lighta.cpp",
         "neopixeloverrides.ts",
         "animations.jres",
         "targetoverrides.ts"
