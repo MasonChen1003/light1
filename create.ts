@@ -1,5 +1,5 @@
 
-namespace light {
+namespace mylight {
     /**
      * Create a new programmable light strip.
      * @param pin the pin where the strip is connected.
