@@ -60,7 +60,7 @@ const enum LightAnimation {
 //% weight=100 color="#0078d7" icon="\uf00a"
 //% groups='["other", "Color", "Photon", "More"]'
 //% blockGap=8
-namespace light {
+namespace mylight {
     export type LightStrip = NeoPixelStrip;
     /**
      * A NeoPixel strip
