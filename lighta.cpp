@@ -21,8 +21,7 @@
 #include "neopixela.h"
 #define BITBANG_SUPPORTED 1
 #else
-#include "neopixela.h"
-#define BITBANG_SUPPORTED 1
+#define BITBANG_SUPPORTED 0
 #endif
 
 #define NEOPIXEL_MIN_LENGTH_FOR_SPI 24
