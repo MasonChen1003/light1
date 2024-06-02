@@ -3,7 +3,7 @@
 
 #include "pxt.h"
 
-namespace light {
+namespace mylight {
     /**
     * Clear onboard neopixels
     */
