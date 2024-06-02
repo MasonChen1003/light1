@@ -5,10 +5,10 @@
 
 // The timings are taken from Adafruit's NeoPixel library
 
-static void neopixel_send_buffer_core(volatile uint32_t *clraddr, uint32_t pinMask,
+static void neopixel_send_buffer_core1(volatile uint32_t *clraddr, uint32_t pinMask,
                                       const uint8_t *ptr, int numBytes) __attribute__((naked));
 
-static void neopixel_send_buffer_core(volatile uint32_t *clraddr, uint32_t pinMask,
+static void neopixel_send_buffer_core1(volatile uint32_t *clraddr, uint32_t pinMask,
                                       const uint8_t *ptr, int numBytes) {
     asm volatile("        push    {r4, r5, r6, lr};"
                  "        add     r3, r2, r3;"
@@ -72,7 +72,7 @@ static void neopixel_send_buffer_core(volatile uint32_t *clraddr, uint32_t pinMa
 }
 
 // this assumes the pin has been configured correctly
-static inline void neopixel_send_buffer(const uint8_t *ptr, int numBytes) {
+static inline void neopixel_send_buffer1(const uint8_t *ptr, int numBytes) {
     uint8_t portNum = BOARD_NEOPIXEL_PIN / 32;
     uint32_t pinMask = 1ul << (BOARD_NEOPIXEL_PIN % 32);
 
@@ -92,10 +92,10 @@ static inline void neopixel_send_buffer(const uint8_t *ptr, int numBytes) {
     // equivalent to cpu_irq_is_enabled()
     if (__get_PRIMASK() == 0) {
         __disable_irq();
-        neopixel_send_buffer_core(clraddr, pinMask, ptr, numBytes);
+        neopixel_send_buffer_core1(clraddr, pinMask, ptr, numBytes);
         __enable_irq();
     } else {
-        neopixel_send_buffer_core(clraddr, pinMask, ptr, numBytes);
+        neopixel_send_buffer_core1(clraddr, pinMask, ptr, numBytes);
     }
 }
 
