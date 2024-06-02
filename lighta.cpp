@@ -107,7 +107,7 @@ void neopixelSendData(DevicePin *pin, int mode, const uint8_t *data, unsigned le
     if (SPI_SUPPORTED && length > NEOPIXEL_MIN_LENGTH_FOR_SPI && isValidMOSIPin(pin))
         spiNeopixelSendBuffer(pin, data, length);
     else
-        neopixel_send_buffer(*pin, data, length);
+        neopixel_send_buffer1(*pin, data, length);
 #else
     if (isValidMOSIPin(pin)) {
         spiNeopixelSendBuffer(pin, data, length);
@@ -181,7 +181,7 @@ void sendBuffer(DevicePin *data, DevicePin *clk, int mode, Buffer buf) {
     if (mode == LIGHTMODE_DOTSTAR)
         light::dotStarSendData(data, clk, mode, buf->data, buf->length);
     else
-        light::neopixelSendData(data, mode, buf->data, buf->length);
+        light::neopixelSendData1(data, mode, buf->data, buf->length);
 }
 
 void clear() {
@@ -191,7 +191,7 @@ void clear() {
         auto n = 3 * neonum;
         uint8_t off[n];
         memset(off, 0, sizeof(off));
-        light::neopixelSendData(neopix, 0x100, off, sizeof(off));
+        light::neopixelSendData1(neopix, 0x100, off, sizeof(off));
     }
 
     auto data = LOOKUP_PIN(DOTSTAR_DATA);
