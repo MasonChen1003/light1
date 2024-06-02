@@ -1,4 +1,4 @@
-namespace light {
+namespace mylight {
     /**
      * Create a range of pixels.
      * @param start offset in the NeoPixel strip to start the range
