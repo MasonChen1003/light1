@@ -221,10 +221,10 @@ namespace mylight {
                     if (i + 1 <= v) {
                         if (i < nhalf) {
                             const b = (i * 255 / nhalf) >> 0;
-                            this.setPixelColor(i, light.rgb(0, b, 255 - b));
+                            this.setPixelColor(i, mylight.rgb(0, b, 255 - b));
                         } else {
                             const b = ((i - nhalf) * 255 / nhalf) >> 0;
-                            this.setPixelColor(i, light.rgb(b, 255 - b, 0));
+                            this.setPixelColor(i, mylight.rgb(b, 255 - b, 0));
                         }
                     }
                     else {
