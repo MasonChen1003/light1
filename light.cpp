@@ -17,10 +17,11 @@
 #define SPI_FREQ 2400000
 #endif
 
-#if defined(SAMD21) || defined(SAMD51) || defined(STM32F4) || defined(NRF52_SERIES)
+#if defined(SAMD21) || defined(SAMD51) || defined(STM32F4) || defined(NRF52_SERIES) || defined(RP2040)
 #include "neopixel.h"
 #define BITBANG_SUPPORTED 1
 #else
+#include "neopixel.h"
 #define BITBANG_SUPPORTED 1
 #endif
 
