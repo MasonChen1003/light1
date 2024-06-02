@@ -19,7 +19,7 @@
 
 #if defined(SAMD21) || defined(SAMD51) || defined(STM32F4) || defined(NRF52_SERIES) || defined(RP2040)
 #include "neopixela.h"
-#define BITBANG_SUPPORTED 1
+#define BITBANG_SUPPORTED 0
 #else
 #define BITBANG_SUPPORTED 0
 #endif
