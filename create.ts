@@ -18,7 +18,7 @@ namespace mylight {
         numleds: number = 8,
         mode: NeoPixelMode = NeoPixelMode.RGB
     ): NeoPixelStrip {
-        return light.createNeoPixelStrip(pin, numleds, mode);
+        return mylight.createNeoPixelStrip(pin, numleds, mode);
     }
 
     /**
