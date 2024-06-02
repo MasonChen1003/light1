@@ -33,7 +33,7 @@
 #define LIGHTMODE_RGB_RGB 3
 #define LIGHTMODE_DOTSTAR 4
 
-namespace light {
+namespace mylight {
 bool isValidMOSIPin(DigitalInOutPin pin) {
     if (!pin)
         return false;
@@ -207,4 +207,4 @@ void clear() {
     }
 }
 
-} // namespace light
+} // namespace mylight
