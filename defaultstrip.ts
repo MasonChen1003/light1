@@ -1,4 +1,4 @@
-namespace light {
+namespace mylight {
     let _defaultStrip: NeoPixelStrip;
     /**
      * Gets the default light strip
