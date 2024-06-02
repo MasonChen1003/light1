@@ -1,18 +1,25 @@
-
-#pragma once
+#ifndef __PXT_LIGHT_H
+#define __PXT_LIGHT_H
 
 #include "pxt.h"
 
-// 新增对新 MCU 的定义
-#if defined(RP2040)
-#define BITBANG_SUPPORTED 1
-#endif
+namespace light {
+    /**
+    * Clear onboard neopixels
+    */
+    void clear();
 
-// 其他条件编译保持不变
-#if defined(SAMD21) || defined(SAMD51) || defined(STM32F4) || defined(NRF52_SERIES) || defined(RP2040)
-#include "neopixel.h"
-#define BITBANG_SUPPORTED 1
-#else
-#include "neopixel.h"
-#define BITBANG_SUPPORTED 1
+    /**
+    * Send a programmable light buffer to the specified digital pin
+    * @param data The pin that the lights are connected to
+    * @param clk the clock line if any
+    * @param mode the color encoding mode
+    * @param buf The buffer to send to the pin
+    */
+    //%
+    void sendBuffer1(DigitalInOutPin data, DigitalInOutPin clk, int mode, Buffer buf);
+
+    void neopixelSendData1(DevicePin* pin, int mode, const uint8_t* data, unsigned length);
+}
+
 #endif
